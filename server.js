@@ -34,6 +34,28 @@ app.get('/api/notes', (req, res) => {
     })
 })
 
+app.post('/api/notes', (req, res) => {
+    const task = req.body;
+    fs.readFile('db.json', 'utf8', (err, jsonString) => {
+        if (err) {
+            console.log('Error getting tasks');
+            return response.status(500).json({error: 'Error reading file'});
+        }
+        let taskInfo = [];
+        if (jsonString) {
+            taskInfo = JSON.parse(jsonString);
+        }
+        taskInfo.push(task);
+        fs.writeFile('db.json', JSON.stingify(jsonData), (err) => {
+            if (err) {
+                console.log('Error writing file:', err);
+                return res.status(500).json({ error: 'Error writing file'});
+            }
+            return res.status(200).json({ message: 'Data written to file successfully'});
+        })
+    })
+})
+
 
 
 
