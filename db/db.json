@@ -8,5 +8,15 @@
         "id": "e9369770-534d-4efd-8ca0-8573aeca0604",
         "title": "gym",
         "text": "legs"
+    },
+    {
+        "id": "a97ca8f1-9884-4359-97e4-aa4d63208322",
+        "title": "dinner",
+        "text": "italian"
+    },
+    {
+        "id": "6ca7d173-7aba-4fd9-beea-5600b4fc72a4",
+        "title": "Lunch",
+        "text": "Beef stew, fresh bread on the side."
     }
 ]
